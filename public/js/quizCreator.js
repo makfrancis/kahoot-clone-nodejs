@@ -1,6 +1,7 @@
 var socket = io();
 var questionNum = 1; //Starts at two because question 1 is already present
 
+
 function updateDatabase(){
     var questions = [];
     var name = document.getElementById('name').value;
@@ -20,7 +21,9 @@ function updateDatabase(){
 }
 
 function addQuestion(){
+    
     questionNum += 1;
+    console.log(questionNum);
     
     var questionsDiv = document.getElementById('allQuestions');
     
@@ -96,7 +99,7 @@ function addQuestion(){
 //Called when user wants to exit quiz creator
 function cancelQuiz(){
     if (confirm("Are you sure you want to exit? All work will be DELETED!")) {
-        window.location.href = "../";
+        window.location.href = "../../index.html";
     }
 }
 
